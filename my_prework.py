@@ -3,7 +3,7 @@
 # The first line of code has been defined as below
 
 def hello_name(user_name):
-    print("Hello_" + user_name + "!")
+    print("Hello_" + user_name.title() + "!")
 
 user_name = input("Enter Username: ")
 
@@ -25,16 +25,16 @@ first_odds()
 # Please write a Python function, max_num_in_list to return the max number of a given list.
 #  The first line of the code has been defined as below.
 
-def max_num_in_list(a_list):
-    max = a_list[0]
-    for i in range(len(a_list)):
-        if a_list[i] > max:
-            max = a_list[i]
+def max_num_in_list(list):
+    max = list[0]
+    for i in range(len(list)):
+        if list[i] > max:
+            max = list[i]
     return max
 
-a_list = [1, 2, 3, 4, 5, 6]
+list = [1, 2, 3, 4, 5, 6]
 
-print(max_num_in_list(a_list))
+print(max_num_in_list(list))
 
 
 # Question 4 
@@ -42,17 +42,17 @@ print(max_num_in_list(a_list))
 #  A leap year is divisible by 4, but not divisible by 100, unless it is also divisible by 400. 
 # The return should be boolean Type (true/false).
 
-def is_leap_year(a_year):
-    if a_year % 4 == 0:
+def is_leap_year(year):
+    if year % 4 == 0:
         return True
-    elif a_year % 400 == 0:
+    elif year % 400 == 0:
         return True
-    elif a_year % 100 == 0:
+    elif year % 100 == 0:
         return False
     else:
         return False
-a_year = int(input())
-print(is_leap_year(a_year))
+year = int(input())
+print(is_leap_year(year))
 
 
 # Question 5
@@ -60,10 +60,10 @@ print(is_leap_year(a_year))
 # For example, [2,3,4,5,6,7] are consecutive numbers, but [1,2,4,5] are not consecutive numbers.
 # the return should be boolean type.
 
-def is_consecutive(a_list):
-    return sorted(a_list) == list(range(min(a_list), max(a_list)+1))
+def is_consecutive(list_0):
+    return sorted(list_0) == list(range(min(list_0), max(list_0)+1))
 
-a_list = [2,3,4,5,6,7]
-print(is_consecutive(a_list))
-a_list = [1,2,4,5]
-print(is_consecutive(a_list))
+list_0 = [2,3,4,5,6,7]
+print(is_consecutive(list_0))
+list_0 = [1,2,4,5]
+print(is_consecutive(list_0))
